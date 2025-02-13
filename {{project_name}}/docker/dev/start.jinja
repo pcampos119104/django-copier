@@ -11,7 +11,7 @@ python manage.py migrate
 # it will be added to the -o output.css in the
 # tailwind processing, --watch=always is the hot reload.
 echo "Starting tailwindcss watcher"
-exec npx @tailwindcss/cli -i ./asdfasdf/static/css/input.css -o ./asdfasdf/static/css/output.css --watch=always &
+exec npx @tailwindcss/cli -i ./{{project_name}}/static/css/input.css -o ./{{project_name}}/static/css/output.css --watch=always &
 
 echo "Starting runserver"
 exec python manage.py runserver 0.0.0.0:8000

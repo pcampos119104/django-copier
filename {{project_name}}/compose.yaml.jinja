@@ -7,8 +7,8 @@ services:
       context: .
       # ... with what Dockerfile instructions
       dockerfile: ./docker/dev/Dockerfile
-    image: asdfasdf_local
-    container_name: asdfasdf_local
+    image: {{project_name}}_local
+    container_name: {{project_name}}_local
     # Make the code accessible for the container.
     volumes:
       - .:/app:z
@@ -27,10 +27,10 @@ services:
   postgres:
     # The postgres image from docker hub
     image: postgres:16.2
-    container_name: asdfasdf_postgres
+    container_name: {{project_name}}_postgres
     # The volume that will be used by this image
     volumes:
-      - asdfasdf_postgres_data:/var/lib/postgresql/data
+      - {{project_name}}_postgres_data:/var/lib/postgresql/data
     # Open the port in localhost:5432 for external access
     ports:
       - "5432:5432"
@@ -40,4 +40,4 @@ services:
 
 volumes:
     # Volume used by the postgres container
-    asdfasdf_postgres_data: { }
+    {{project_name}}_postgres_data: { }

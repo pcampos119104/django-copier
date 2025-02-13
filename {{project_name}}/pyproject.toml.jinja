@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "asdfasdf"
+name = "{{project_name}}"
 version = "0.1.0"
 description = ""
 authors = ["Your Name <you@example.com>"]
@@ -27,7 +27,7 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 # Configurations for pystest
 [tool.pytest.ini_options]
-DJANGO_SETTINGS_MODULE = "asdfasdf.settings"
+DJANGO_SETTINGS_MODULE = "{{project_name}}.settings"
 
 # -- find the tests:
 python_files = ["test_*.py", "*_test.py", "testing/python/*.py"]
