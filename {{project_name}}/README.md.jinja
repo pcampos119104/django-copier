@@ -45,4 +45,9 @@ Versions on Poetry.
 2. `$ just runserver`
 
 You can access the Django app on http://0.0.0.0:8000/ and Marimo notebook on http://0.0.0.0:2718/
- 
+
+## On production
+add to the .env:
+
+ALLOWED_HOSTS={{ project_domain }}
+CSRF_TRUSTED_ORIGINS=https://{{ project_domain }}
