@@ -7,7 +7,7 @@ build:
   docker compose build
 
 # Run the Django app in development mode
-runserver:
+run:
   docker compose up --build
 
 # Enter in the container shell
